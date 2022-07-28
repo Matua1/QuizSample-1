@@ -4,15 +4,18 @@
 #I will be using the time module to give the user the impression that they are having a conversation with the computer.
 import time
 
+
+typewriter = print
 #typewriter effect
 def typewriter(string):
   listString = list(string)
   for char in listString:
     print(char, end = "", flush = True)
-    time.sleep(.5)
-    return "" 
+    time.sleep(0.02)
+     
+    
 
-typewriter("Welcome to the Pap High Clean Water Project! You WIN by avoiding 4 WRONG answers.")
+typewriter ("Welcome to the Pap High Clean Water Project! You WIN by avoiding 4 WRONG answers.")
 wrong_answers = 0
 right_answers = 0
 while wrong_answers < 4:
@@ -66,6 +69,7 @@ while wrong_answers < 4:
     if wrong_answers < 4:
         typewriter ('Congrats, you win! You guessed correctly ' + str(right_answers) + ' times!')
         typewriter ('You were incorrect ' + str(wrong_answers) + ' times, and correct ' + str(right_answers) + ' times.')
+    break
 
 
 typewriter(string)
